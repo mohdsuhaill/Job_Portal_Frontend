@@ -10,7 +10,7 @@
 
 must fill all the register form fields ...
 
-<h1>Frontend</h1>
+<h1>Frontend:</h1>
 
   *  Use React for building a dynamic and interactive UI.<br>
   *  Create separate components for the login and registration forms.<br>
