@@ -36,7 +36,7 @@ must fill all the register form fields ...
 
    <h3>Registration:</h3>
 
-   *  Displays fields where users can sign up by entering their fullname,email,phonenumber, password role and profile picture all must.
+   *  Displays fields where users can sign up by entering their fullname,email,phonenumber, password role and profile picture all must field .
    *  After registration, the app provides the option to log in.
 
   <h3>Login:</h3>
