@@ -43,6 +43,20 @@ must fill all the register form fields ...
 
    *  Displays fields where users can sign in by entering their email and password.
    * Includes the option to sign in using OAuth.
+
+  <h3>API Integration and Authentication:</h3>
+  
+  * Tested the APIs (created with backend) with Postman for proper UI designing.
+  * Used fetch for the API requests.
+
+  <h3>Redux Setup and State Management:</h3>
+
+ *  Implemented @reduxjs/toolkit library for state management.
+ *  Defined actions, reducers, and initial state for handling the states globally around the app.
+ *  Integrated Redux with the app components to manage state changes.
+
+  
+
   
 
 
