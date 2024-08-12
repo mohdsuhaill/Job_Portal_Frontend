@@ -29,7 +29,7 @@ must fill all the register form fields ...
 
   <h1>Frontend Development Approach:</h1>
 
-  <h2>Frontend Development Approach:</h2>
+  <h2>Project Setup and Planning:</h2>
 
    *  Completed setting up the development environment with React and necessary dependencies.
    *  Analyzed the project requirements.
