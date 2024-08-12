@@ -5,8 +5,8 @@
    *Password: suhail123
 
 <h3>User Credentials:</h3>
-    Email: yourgami... email Id <br>
-    Password: yourpassword
+   * Email: yourgami... email Id <br>
+   * Password: yourpassword
 
 must fill all the register form fields ...
 
