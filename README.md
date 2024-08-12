@@ -18,7 +18,7 @@ must fill all the register form fields ...
   *  Utilize React Router for handling client-side routing.<br>
   *  Implement Redux or the Context API for state management across the application.<br>
 
-  <h1></h1>
+  <h1>Functionality</h1>
 
    Users can make their profile on the home page using the form.<br>
    Users can browse and search for job opportunities based on their skills, preferences, and experiences.<br>
