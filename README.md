@@ -27,5 +27,12 @@ must fill all the register form fields ...
   *  Enables candidates to track the status of their job applications and manage their application history.<br>
   *  Sends notifications to users about new job opportunities (Through Email), application status updates, and other relevant information.<br>
 
+  <h1>Frontend Development Approach:</h1>
+
+  <h2>Frontend Development Approach:</h2>
+
+   *  Completed setting up the development environment with React and necessary dependencies.
+   *  Analyzed the project requirements.
+
 
 
