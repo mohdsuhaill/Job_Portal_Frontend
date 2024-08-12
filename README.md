@@ -1,8 +1,13 @@
-# React + Vite
+<h1>Job Portal</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h3>Admin Credentials:</h3>
+*Email: suhailt@gmail.com
+*Password: suhail123
 
-Currently, two official plugins are available:
+<h3>User Credentials:</h3>
+Email: yourgami... email Id
+Password: yourpassword
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+must fill all the register form fields ...
+
+
