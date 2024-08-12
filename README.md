@@ -8,7 +8,7 @@
    *  Email: yourgami... email Id <br>
    *  Password: yourpassword
 
-must fill all the register form fields ...
+    must fill all the register Form fields and Form fields ...
 
 <h1>Frontend:</h1>
 
