@@ -34,5 +34,19 @@ must fill all the register form fields ...
    *  Completed setting up the development environment with React and necessary dependencies.
    *  Analyzed the project requirements.
 
+   <h3>Registration:</h3>
 
+   *  Displays fields where users can sign up by entering their fullname,email,phonenumber, password role and profile picture all must.
+   *  After registration, the app provides the option to log in.
+
+  <h3>Login:</h3>
+
+   *  Displays fields where users can sign in by entering their email and password.
+   * Includes the option to sign in using OAuth.
+  
+
+
+
+
+   
 
