@@ -9,7 +9,8 @@ import { toast } from "sonner";
 import axios from "axios";
 import { USER_API_END_POINT } from "@/utilsHidder/Constant";
 import { useDispatch, useSelector } from "react-redux";
-import { setLoading, setUser } from "@/Redux/authSlice";
+import { setLoading, setUser, setToken } from "@/Redux/authSlice";
+
 import { Loader2 } from "lucide-react";
 
 const Login = () => {
@@ -39,9 +40,15 @@ const Login = () => {
                     "Content-Type":"application/json"
                 },
                 withCredentials:true,
+               
             })
+            dispatch(setToken(res.data.token));
+            console.log("token",res.data.token);
             if(res.data.success){
+
+              
               dispatch(setUser(res.data.user));
+              
                 navigate("/")
                 toast.success(res.data.message)
             }

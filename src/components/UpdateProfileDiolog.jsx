@@ -12,7 +12,7 @@ import { toast } from "sonner";
 
 const UpdateProfileDiolog = ({ open, setOpen }) => {
     const [loading,setLoading] = useState(false);
-    const {user} = useSelector(store=>store.auth);
+    const {user,token} = useSelector(store=>store.auth);
 
     const [input,setInput]=useState({
         fullname:user?.fullname,
@@ -45,15 +45,19 @@ const UpdateProfileDiolog = ({ open, setOpen }) => {
 
          if(input.file){
             formData.append("file",input.file)
+
          }
          try {
             setLoading(true)
             const res = await axios.post(`${USER_API_END_POINT}/profile/update`,formData,{
                 headers:{
-                    'Content-Type':'multipart/form-data'
+                    'Content-Type':'multipart/form-data',
+                     "Authorization": `Bearer ${token}`
+                    
                 },
                 withCredentials:true
             })
+            
             if(res.data.success){
                 dispatch(setUser(res.data.user));
                 toast.success(res.data.message)
