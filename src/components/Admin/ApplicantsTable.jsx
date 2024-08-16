@@ -19,7 +19,7 @@ const ApplicantsTable = () => {
             const res = await axios.post(`${APPLICATION_API_END_POINT}/status/${id}/update`,{status},
                 {
                     headers: {
-                        "Content-Type": "application/json",
+                        
                         "Authorization": `Bearer ${token}`
             
                       },
