@@ -40,7 +40,6 @@ const Login = () => {
                     "Content-Type":"application/json"
                 },
                 withCredentials:true,
-               
             })
             dispatch(setToken(res.data.token));
             console.log("token",res.data.token);
