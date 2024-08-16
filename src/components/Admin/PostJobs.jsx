@@ -30,6 +30,7 @@ const PostJobs = () => {
     const navigate = useNavigate();
 
     const {companies}=useSelector(store=>store.company)
+    const {token}=useSelector(store=>store.auth)
     const changeEventHandler = (e)=>{
         setInput({...input,[e.target.name]:e.target.value})
     };
@@ -44,7 +45,8 @@ const PostJobs = () => {
          setLoading(true);
          const res = await axios.post(`${JOB_API_END_POINT}/post`,input,{
             headers:{
-                'Content-Type':'application/json'
+                'Content-Type':'application/json',
+                "Authorization": `Bearer ${token}`
             },
             withCredentials:true
          })
@@ -177,7 +179,9 @@ const PostJobs = () => {
                     )
                 }
                 </div>
-               
+                {
+                        loading ? <Button className="w-full my-4"> <Loader2 className='mr-2 h-4 w-4 animate-spin' /> Please wait </Button> : <Button type="submit" className="w-full my-4">Post New Job</Button>
+                    }
                 
                 {
                     companies.length === 0 && <p className='text-xs text-red-600 font-bold text-center my-3'>please Register a company first ,before posting a Jobs and  Must Fill All The Feilds</p>

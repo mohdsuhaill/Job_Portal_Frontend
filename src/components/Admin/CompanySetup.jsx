@@ -22,6 +22,9 @@ const CompanySetup = () => {
     file: null,
   });
   const {singleCompany} = useSelector(store=>store.company)
+  const {token} = useSelector(store=>store.auth)
+  console.log(token);
+  
 
   const [loading, setLoading] = useState(false);
 
@@ -51,15 +54,19 @@ const CompanySetup = () => {
     try {
       setLoading(true);
       const res = await axios.put(
-        `${COMPANY_API_END_POINT}/update/${params.id}`,
+        `${COMPANY_API_END_POINT}/updateCompany/${params.id}`,
         formData,
         {
           headers: {
-            "Content-Type": "multipart/form-data",
+            
+            "Authorization": `Bearer ${token}`
+
           },
           withCredentials: true,
         }
       );
+      console.log("token up"+token);
+      
       if (res.data.success) {
         toast.success(res.data.message);
         navigate("/admin/companies");
@@ -146,7 +153,7 @@ const CompanySetup = () => {
           </div>
 
           {
-              loading ? <Button className="w-full my-4"><Loader2 className="mr-2 h-4 w-4 animate-spin"/>please wait</Button> :<Button type="submit" className="w-full my-4">update</Button>
+              loading ? <Button className="w-full my-4"><Loader2 className="mr-2 h-4 w-4 animate-spin"/>please wait</Button> : <Button type="submit" className="w-full my-4">update</Button>
            }
         </form>
       </div>

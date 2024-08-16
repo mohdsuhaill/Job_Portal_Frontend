@@ -11,11 +11,20 @@ import { APPLICATION_API_END_POINT } from '@/utilsHidder/Constant';
 
 const shortlistingStatus = ["Accepted","Rejected"]
 const ApplicantsTable = () => {
+    const {token} = useSelector(store=>store.auth)
     const {applicants}= useSelector(store=>store.application);
     const statusHandler = async (status,id)=>{
         try {
             axios.defaults.withCredentials = true ;
-            const res = await axios.post(`${APPLICATION_API_END_POINT}/status/${id}/update`,{status});
+            const res = await axios.post(`${APPLICATION_API_END_POINT}/status/${id}/update`,{status},
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`
+            
+                      },
+                    withCredentials:true}
+            );
             if(res.data.success){
                 toast.success(res.data.message)
             }

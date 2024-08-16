@@ -11,7 +11,7 @@ import { toast } from 'sonner';
 const JobDescription = () => {
 
     const {singleJob} = useSelector(store=>store.job)
-    const {user}= useSelector(store=>store.auth)
+    const {user,token}= useSelector(store=>store.auth)
     const isIntiallyApplied = singleJob?.applications?.some(application=>application.applicant === user?._id) || false;
     const [isApplied,setIsApplied] = useState(isIntiallyApplied)
 
@@ -21,7 +21,12 @@ const JobDescription = () => {
 
     const applyJobHandler = async ()=>{
         try {
-            const res = await axios.get(`${APPLICATION_API_END_POINT}/apply/${jobId}`,{withCredentials:true});
+            const res = await axios.get(`${APPLICATION_API_END_POINT}/apply/${jobId}`,{
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                    "Authorization": `Bearer ${token}`
+                  },
+                withCredentials:true});
             console.log(res.data);
             
             if(res.data.success){
