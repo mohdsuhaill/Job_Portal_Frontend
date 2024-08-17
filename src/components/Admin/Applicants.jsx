@@ -12,7 +12,7 @@ const Applicants = () => {
     const {token} = useSelector(store=>store.auth)
     const params = useParams();
     const dispatch = useDispatch();
-    const {applicants}= useSelector(store=>store.application.applications)
+    const {applicants}= useSelector(store=>store.application)
     
     useEffect(()=>{
         const fetchAllApplicants = async ()=>{
@@ -36,8 +36,7 @@ const Applicants = () => {
         <div>
             <Navbar />
             <div className='max-w-7xl mx-auto'>
-                <h1 className='font-bold text-xl my-5'>  Applicants {Array.isArray(applicants) ? applicants.length : 0}
-                </h1>
+                <h1 className='font-bold text-xl my-5'>Applicants {applicants.applications.length}</h1>
                 <ApplicantsTable />
             </div>
         </div>
