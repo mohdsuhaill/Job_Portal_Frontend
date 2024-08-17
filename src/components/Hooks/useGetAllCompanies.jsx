@@ -12,9 +12,7 @@ const useGetAllCompanies = () => {
         try {
              const res = await axios.get(`${COMPANY_API_END_POINT}/getAllCompanies`,{
                 headers: {
-                   
                     "Authorization": `Bearer ${token}`
-        
                   },
                 withCredentials:true})
              if(res.data.success){
