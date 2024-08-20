@@ -1,10 +1,12 @@
 <h1>Job Portal</h1>
 
 <h3>Admin Credentials:</h3>
-   *  Email: suhailt@gmail.com <br>
+   *  Email: suhail12@gmail.com <br>
    *  Password: suhail123
 
 <h3>User Credentials:</h3>
+   *  laddu@gmail.com
+   *  laddu123
    *  Email: yourgami... email Id <br>
    *  Password: yourpassword
 
@@ -13,7 +15,7 @@
 <h1>Frontend:</h1>
 
   *  Use React for building a dynamic and interactive UI.<br>
-  *  Create separate components for the login and registration forms.<br>
+  *  Create separate components for the login and registration forms Must Fill the All fields .<br>
   *  Use React state and Formik to manage form inputs and validation messages.<br>
   *  Utilize React Router for handling client-side routing.<br>
   *  Implement Redux or the Context API for state management across the application.<br>
