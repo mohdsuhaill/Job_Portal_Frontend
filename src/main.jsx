@@ -26,7 +26,7 @@ import { PersistGate } from "redux-persist/integration/react";
 function AppWithState() {
   // useState must be inside a functional component
   const [token, setToken] = useState('');
-
+  
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
