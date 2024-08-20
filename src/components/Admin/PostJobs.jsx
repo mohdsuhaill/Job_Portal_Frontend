@@ -63,7 +63,6 @@ const PostJobs = () => {
         
     }
 
-
     return (
         <div>
             <Navbar />
