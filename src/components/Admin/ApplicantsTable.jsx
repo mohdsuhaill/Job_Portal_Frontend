@@ -50,7 +50,7 @@ const ApplicantsTable = () => {
                     </TableHeader>
                     <TableBody>
                         {
-                            applicants && applicants.applications.map((item)=>(
+                            applicants && applicants?.applications?.map((item)=>(
                                 <tr key={item._id}>
                             <TableCell>{item?.applicant?.fullname}</TableCell>
                             <TableCell>{item?.applicant?.email}</TableCell>
@@ -68,7 +68,7 @@ const ApplicantsTable = () => {
                                     </PopoverTrigger>
                                     <PopoverContent className="w-32">
                                     {
-                                      shortlistingStatus.map((status,index)=>{
+                                      shortlistingStatus?.map((status,index)=>{
                                       return (
                                          <div onClick={()=>statusHandler(status,item?._id)} key={index} className='flex w-fit items-center my-2 cursor-pointer'>
                                         <span>{status}</span>
