@@ -13,7 +13,7 @@ const Applicants = () => {
     const params = useParams();
     const dispatch = useDispatch();
     const {applicants}= useSelector(store=>store.application)
-    console.log(applicants+"applicants");
+    // console.log(applicants+"applicants");
     
     
     useEffect(()=>{

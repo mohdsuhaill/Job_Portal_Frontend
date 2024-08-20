@@ -21,7 +21,7 @@ const CompaniesTable = () => {
   const navigate = useNavigate();
   
   useEffect(()=>{
-    const filteredCompany = companies.length >= 0 && companies.filter((company)=>{
+    const filteredCompany = companies?.length >= 0 && companies?.filter((company)=>{
       if(!searchCompanyByText){
         return true
       }

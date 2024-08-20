@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const useGetCompanyById = (companyId) => {
     const {token} = useSelector(store=>store.auth)
-    console.log("usegetIDCompany"+ token);
+    // console.log("usegetIDCompany"+ token);
     
     
     const dispatch = useDispatch();
