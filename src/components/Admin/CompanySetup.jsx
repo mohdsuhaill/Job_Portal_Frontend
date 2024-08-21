@@ -43,13 +43,13 @@ const CompanySetup = () => {
     e.preventDefault();
     //   console.log(input);
     const formData = new FormData();
-    formData.append("name", input.name);
-    formData.append("description", input.description);
-    formData.append("website", input.website);
-    formData.append("location", input.location);
+    formData.append("name", input?.name);
+    formData.append("description", input?.description);
+    formData.append("website", input?.website);
+    formData.append("location", input?.location);
 
     if (input.file) {
-      formData.append("file", input.file);
+      formData.append("file", input?.file);
     }
     try {
       setLoading(true);
@@ -111,7 +111,7 @@ const CompanySetup = () => {
               <Input
                 type="text"
                 name="name"
-                value={input.name}
+                value={input?.name}
                 onChange={changeEventHandler}
               />
             </div>
@@ -120,7 +120,7 @@ const CompanySetup = () => {
               <Input
                 type="text"
                 name="description"
-                value={input.description}
+                value={input?.description}
                 onChange={changeEventHandler}
               />
             </div>
@@ -129,7 +129,7 @@ const CompanySetup = () => {
               <Input
                 type="text"
                 name="website"
-                value={input.website}
+                value={input?.website}
                 onChange={changeEventHandler}
               />
             </div>
@@ -138,7 +138,7 @@ const CompanySetup = () => {
               <Input
                 type="text"
                 name="location"
-                value={input.location}
+                value={input?.location}
                 onChange={changeEventHandler}
               />
             </div>
