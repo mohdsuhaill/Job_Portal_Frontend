@@ -42,7 +42,7 @@ const Login = () => {
                 withCredentials:true,
             })
             dispatch(setToken(res.data.token));
-            console.log("token",res.data.token);
+            // console.log("token",res.data.token);
             if(res.data.success){
 
               
