@@ -45,7 +45,12 @@ const JobDescription = () => {
     useEffect(()=>{
         const fetchSingleJobs = async ()=>{
             try {
-                 const res = await axios.get(`${JOB_API_END_POINT}/get/${jobId}`,{withCredentials:true});
+                 const res = await axios.get(`${JOB_API_END_POINT}/get/${jobId}`,{
+                    headers: {
+                        "Authorization": `Bearer ${token}`
+                      },
+                    
+                    withCredentials:true});
                 //  console.log(res);
                  
                  if(res.data.success){
