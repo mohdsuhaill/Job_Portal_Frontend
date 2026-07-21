@@ -55,7 +55,7 @@
 
  *  Implemented @reduxjs/toolkit library for state management.
  *  Defined actions, reducers, and initial state for handling the states globally around the app.
- *  Integrated Redux with the app components to manage state changes.
+ *  Integrated with the app components to manage state changes.
 
   
 
